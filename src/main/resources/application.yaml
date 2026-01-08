@@ -1,0 +1,30 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: redbus
+  datasource:
+    url: jdbc:mysql://localhost:3306/redbus?createDatabaseIfNotExist=true
+    username: root
+    password: Hamsi@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        '[format_sql]': true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jaggarajuvenkateswararaju@gmail.com
+    password: cdmdhchyunftzlag
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+admin:
+  email: admin@gmail.com
+  password: admin

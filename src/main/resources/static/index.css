@@ -1,0 +1,151 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: #d32f2f;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    color: black;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.btn {
+    background: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Road */
+.road {
+    height: 150px;
+    background: #444;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bus Body */
+.bus {
+    position: absolute;
+    bottom: 25px;
+    left: -200px;
+    width: 180px;
+    height: 70px;
+    background: red;
+    border-radius: 10px;
+    animation: moveBus 6s linear infinite;
+}
+
+/* Bus Top */
+.bus-top {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    width: 120px;
+    height: 25px;
+    background: darkred;
+    border-radius: 8px;
+}
+
+/* Window */
+.bus-window {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 100px;
+    height: 20px;
+    background: lightblue;
+}
+
+/* Wheels */
+.wheel {
+    position: absolute;
+    bottom: -12px;
+    width: 25px;
+    height: 25px;
+    background: black;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+.left { left: 30px; }
+.right { right: 30px; }
+
+/* Animations */
+@keyframes moveBus {
+    from { left: -200px; }
+    to { left: 110%; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Search Box */
+.search-box {
+    background: white;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.search-box input,
+.search-box button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.search-box button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .bus {
+        width: 140px;
+        height: 60px;
+    }
+
+    .bus-top {
+        width: 90px;
+    }
+}

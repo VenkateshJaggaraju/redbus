@@ -1,0 +1,132 @@
+@charset "UTF-8";* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .seat {
+    background: #555;
+}
+
+body.dark .seat.selected {
+    background: lime;
+}
+
+/* Navbar */
+.navbar {
+    background: #d32f2f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar span {
+    color: black;
+}
+
+/* Auth Pages */
+.auth-bg {
+    background: linear-gradient(to right, #d31027, #ea384d);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fade 1s;
+}
+
+.auth-box input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.auth-box button {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+/* Animation */
+.slide-in {
+    animation: slide 0.8s ease;
+}
+
+@keyframes slide {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Seat Booking */
+.center {
+    text-align: center;
+    margin: 20px;
+}
+
+.bus-layout {
+    width: 280px;
+    margin: auto;
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.driver {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.booked {
+    background: red;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background: green;
+}
+
+/* Mobile */
+@media(max-width:600px) {
+    .bus-layout {
+        width: 90%;
+    }
+}

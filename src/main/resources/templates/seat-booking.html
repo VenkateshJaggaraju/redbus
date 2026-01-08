@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>redBus – Seat Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>red<span>Bus</span></h2>
+    <button onclick="toggleDark()">🌙</button>
+</header>
+
+<h3 class="center">Select Your Seat</h3>
+
+<div class="bus-layout">
+    <div class="driver">Driver</div>
+
+    <div class="seats">
+        <div class="seat"></div>
+        <div class="seat booked"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat booked"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+</div>
+
+<p class="center">Selected Seats: <span id="count">0</span></p>
+
+<script src="script.js"></script>
+</body>
+</html>
